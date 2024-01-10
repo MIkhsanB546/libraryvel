@@ -30,6 +30,7 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('bukus', BukuController::class);
     Route::delete('/bukus/{bukuID}', [BukuController::class, 'destroy'])->name('bukus.destroy');
+    Route::put('/bukus/{bukuID}', [BukuController::class, 'update'])->name('bukus.update');
 
 });
 
